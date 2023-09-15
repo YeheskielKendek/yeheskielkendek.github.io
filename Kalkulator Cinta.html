@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Cinta Sejati</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e6da;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+        label, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            cursor: pointer; 
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .pencipta{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Cinta Sejati</h1>
+        <label for="name1">Masukkan Nama Anda:</label>
+        <input type="text" id="name1" />
+        <label for="name2">Masukkan Nama Pasangan:</label>
+        <input type="text" id="name2" />
+        <button onclick="calculateMatch()">Hitung</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function calculateMatch() {
+            var name1 = document.getElementById('name1').value.trim().toLowerCase();
+            var name2 = document.getElementById('name2').value.trim().toLowerCase();
+            var result = document.getElementById('result');
+
+            if (name1 === '' || name2 === '') {
+                result.textContent = 'Mohon isi kedua nama';
+            } else {
+                var matchPercentage = calculatePercentage(name1, name2);
+                result.textContent = 'Kecocokan Nama Pasangan: ' + matchPercentage + '%';
+            }
+        }
+
+        function calculatePercentage(name1, name2) {
+            var combinedNames = name1 + name2;
+            var uniqueChars = new Set(combinedNames);
+            var percentage = (uniqueChars.size / 26) * 100;
+            return percentage.toFixed(2);
+        }
+    </script>
+
+<footer class="pencipta">
+    <p>&copy; By Yeheskiel Kendek</p>
+</footer>
+
+</body>
+</html>
