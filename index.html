@@ -1,52 +1,300 @@
+<!doctype html>
 <html lang="en">
-  <!-- 
-  Code Made By Yeheskiel Kendek
-  Instagram : @yeheskiel_kendek
-  -->
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
-    <title>Happy Birth Day</title>
-    <style>html { scroll-behavior: smooth; } * { padding: 0; margin: 0; font-family: "Ubuntu"; color: rgb(56, 56, 56); } body { background: wheat; /* background-image: url("https://wallpaper.dog/large/10871886.png"); */ background-image: linear-gradient(#ff71c0, #b983ff, #5aaeff); background-position: center; background-size: cover; overflow: hidden; overflow: hidden; } .open { background-image: linear-gradient(#ff71c0, #b983ff); height: 100vh; width: 100vw; position: fixed; top: 0; display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; z-index: 1; transition: 0.5s all ease; } .open h2 { /* margin: 0 30px; */ margin-bottom: 20px; color: rgb(56, 56, 56); text-align: center; max-width: 600px; } .open .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); text-align: center; } .open .card h3 { margin-top: 20px; } .open .card img { height: 100px; } .atas { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; } .atas img { height: 200px; margin-bottom: 50px; padding: 20px 30px; background: white; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); } .atas h2 { font-size: 1.5em; padding: 20px 30px; background: white; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); } p { display: block; text-align: center; color: rgb(56, 56, 56); background: white; font-weight: bold; font-size: 1.5em; padding: 50px 30px; margin: 40px 20px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); } p.wm { width: fit-content; margin-top: 100px; margin-bottom: 0; padding: 10px 20px; border-radius: 10px 10px 0 0; font-weight: 500; font-size: .9em; color: red; } p.wm a { color: red; text-decoration: none; } .material-icons-sharp { color: red; font-size: 30px; transform: translateY(5px); animation: kenyal 2s ease infinite; cursor: pointer; } @keyframes kenyal { 0% { transform: scale(1) translateY(5px); } 50% { transform: scale(1.2) translateY(5px); } 100% { transform: scale(1) translateY(5px); } }</style>
-  </head>
-  <body class="body">
-    <div class="open">
-      <div class="card">
-        <h2>Ada pesan buat kamu</h2>
-          <img onclick="mulai()" src="https://dekatutorial.github.io/spesial_mail.png" alt="" srcset="" />
-        <h3>Tekan untuk membuka</h3>
-      </div>
-    </div>
-    <div class="atas" id="atas">
-      <img onclick="mulai()" src="https://dekatutorial.github.io/spesial_stikerUltah.png" alt="" />
-      <h2>Scroll kebawah ya</h2>
-    </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <p data-aos="zoom-in">Hai Kamu</p>
-    <p data-aos="zoom-in">Ciyeeee</p>
-    <p data-aos="zoom-in">Yang hari ini ulang tahun</p>
-    <p data-aos="zoom-in">Semoga panjang umur</p>
-    <p data-aos="zoom-in">Sehat selalu</p>
-    <p data-aos="zoom-in">Tambah sukses</p>
-    <p data-aos="zoom-in">Semoga yang diimpikan tercapai</p>
-    <p data-aos="zoom-in">Harus lebih baik dari tahun lalu yaa</p>
+    <title>Kiel HTML Bootstrap 5 Template</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
     
-    <p data-aos="zoom-in">Yuk pencet love nya 
-      <i onclick="tanya()" class="material-icons-sharp"> favorite </i></p>
+<!--
 
-    <script>
+Tooplate 2115 Kiel
 
-      var musik = "";
+https://www.tooplate.com/view/2115-Kiel
 
-    </script>
-    <script> AOS.init({ once: true, }); </script> <script> if(musik == "") { musik = "https://dekatutorial.github.io/Selamat%20Ulang%20Tahun%20[Jamrud].mp3"; } var audio = new Audio(musik); audio.loop = true; audio.autoplay = true; function mulai() { audio.play(); document.querySelector(".open").style = "opacity: 0;"; document.querySelector(".body").style = "overflow-y: scroll;"; setTimeout(function () { document.querySelector(".open").style.display = "none"; }, 1000); } function wa(isi) { window.open("https://api.whatsapp.com/send?text= Makasih ya udah inget ulang tahun aku, di hari spesial ini aku pengin " + isi); } async function tanya() { var { value: kado } = await swal.fire({ title: "Di hari spesial ini kamu pengin nya apa?", input: "text", showCancelButton: false, }); if (kado) { await swal.fire("Kirim jawabannya ke wa aku ya"); wa(kado); } else { await swal.fire("Jangan dikosongin dong"); tanya(); } } </script> <p class="wm"><span><a href="https://www.instagram.com/yeheskiel_kendek">My ig: yeheskiel_kendek</a></span></p>
+-->
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Kiel</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey folks, I'm</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Yeheskiel K</span>
+                                    <span class="animated-item">FrontEnd</span>
+                                    <span class="animated-item">Student</span>
+                                </div>
+                        </h1>
+
+                        <p>"LIFE IS WHAT WE MAKE IT. SO DO GOOD, CREATE BEAUTIFUL MEMORIES, AND DO THINGS THAT GIVE MEANING TO YOUR LIFE."</p>
+                        
+                        <div class="custom-btn-group mt-4">
+                          <a href="https://yeheskielkendek.my.canva.site" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Introduction My Web</a>
+                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Work With Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="project py-5" id="project">
+        <div class="container">
+                
+                <div class="row">
+                  <div class="col-lg-11 text-center mx-auto col-12">
+
+                      <div class="col-lg-8 mx-auto">
+                        <h2>My Creation (better coming soon&#x1F643;)</h2>
+                      </div>
+
+                      <div class="owl-carousel owl-theme">
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image02.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image03.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="images/project/project-image04.png" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Experiences</h2>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Frontend Web Developer (still learning)</h3>
+                                <p>Saya memulai belajar membuat web ketika saya masih kelas 3 SMA, ketika itu saya memulai untuk mempelajari HTML, CSS, Bootstrap, dan sedikit belajar JavaScript.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Student (Now)</h3>
+                                <p>Saat ini saya sedang berkuliah di Universitas Negeri Surabaya dengan mengambil jurusan Teknik Informatika.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2011</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>SD Negeri Inpres Malompo</span><small></small></h3>
+                                  <p>Saya memulai pendidikan sekolah dasar saya di SD Negeri Inpres Malompo.</p>
+                             </div>
+                        </div>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2017</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>SMP Negeri 5 Nabire</span><small></small></h3>
+                                  <p>Saya memulai pendidikan sekolah menengah pertama saya di SMP Negeri 5 Nabire.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2020</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>SMA YPPK Adhi Luhur</span><small>IPA</small></h3>
+                                <p>Saya memulai pendidikan sekolah menengah atas saya di SMA YYPK Adhi Luhur.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Universitas Negeri Surabaya</span><small>TI</small></h3>
+                                <p>Sekarang, saya melanjutkan studi saya di Universitas Negeri Surabaya.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <p class="footer-text mb-0">Phone: +62 813-4480-3107</p>
+                  <p><a href="https://www.google.co.id/maps/place/Yayasan+Kaki+Dian+Emas+-+Beasiswa+FLATS/@-7.3136308,112.7224503,18z/data=!4m6!3m5!1s0x2dd7fbdfdc918773:0xfd095a4bd4b107ee!8m2!3d-7.3136124!4d112.7231576!16s%2Fg%2F11qh7fdjzm?entry=ttu">Address: Jl. Ketintang Madya No.66, Ketintang, Surabaya (tap)</a></p>
+                  <p>Email: yeheskiel130905@gmail.com</p>
+                  <p><a href="https://www.instagram.com/yeheskiel_kendek">Instagram: yeheskiel_kendek (tap)</a></p>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+              <form action="" method="get">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="ml-lg-auto col-lg-5 col-12">
+                    <input type="submit" class="form-control submit-btn" value="Send Button">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2023 University of Surabaya . All rights reserved</p>
+                        <p class="copyright-text text-center">Designed by Yeheskiel Kendek</a></p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
   </body>
 </html>
