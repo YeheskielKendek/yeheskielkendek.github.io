@@ -1,300 +1,518 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,600&display=swap");
+@font-face {
+  font-family: "Cocogoose";
+  src: url("Cocogoose.ttf") format("truetype");
+}
 
-    <title>Kiel HTML Bootstrap 5 Template</title>
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/unicons.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+body {
+  min-height: 100%;
+  background: #ff4136;
+  background: -moz-linear-gradient(
+    45deg,
+    #ff4136 50%,
+    #ff7376 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    #ff4136 50%,
+    #ff7376 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #ff4136 50%,
+    #ff7376 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#87e0fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  transition: 0.3s;
+  font-size: 18px;
+}
 
-    <!-- MAIN STYLE -->
-    <link rel="stylesheet" href="css/tooplate-style.css">
-     
-<!--
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-family: "Cocogoose";
+}
 
-Tooplate 2115 Kiel
+/* Wrapper Section */
 
-https://www.tooplate.com/view/2115-Kiel
+.wrapper {
+  height: 100%;
+  color: #fff;
+  padding: 50px;
+}
 
--->
+.maincontent {
+  display: flex;
+  margin: 100px auto 20px auto;
+  text-align: center;
+  flex-flow: row;
+  justify-content: center;
+}
+
+label {
+  font-weight: 600;
+}
+
+.maincontent input {
+  width: 350px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  color: #ffffff;
+  outline: none;
+  padding: 20px;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  box-shadow: 0 10px 23px 10px #00000020;
+}
+
+.maincontent input:focus {
+  width: 450px;
+  background-color: #fff;
+  color: #00000020;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.maincontent input:valid {
+  background-color: #fff;
+  color: #ff4136;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  color: #ff4136;
+  padding: 15px 30px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+  font-weight: 600;
+  box-shadow: 0 10px 23px 10px #00000020;
+}
+button:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.result {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.result h1 {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+.divider {
+  width: 200px;
+  height: 2px;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#loveinfo {
+  line-height: 1.5;
+}
+/* End of wrapper section */
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Responsive Codes */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 16px;
+  }
+  .wrapper {
+    padding: 50px 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .maincontent {
+    margin: 50px auto 20px auto;
+    display: grid;
+  }
+  .maincontent input {
+    margin: 20px 0;
+    width: 90%;
+    height: 30px;
+  }
+
+  .maincontent input:focus {
+    width: 100%;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 15px 5%;
+  }
+
+  .result {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
+
+  #score {
+    font-size: 2rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  .maincontent {
+    margin: 50px auto 20px auto;
+    display: grid;
+  }
+  .maincontent input {
+    margin: 20px 0;
+    height: 30px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 15px 5%;
+  }
+
+  .result {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
+
+  #score {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  .maincontent {
+    display: flex;
+  }
+  .maincontent input {
+    width: 300px;
+    margin: 20px;
+  }
+
+  .maincontent input:focus {
+    width: 350px;
+  }
+
+  button {
+    padding: 15px 5%;
+  }
+
+  .result {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
+
+  #score {
+    font-size: 2rem;
+  }
+}
+
+    </style>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="heading">
+        <h1>Love ♥ Calculator</h1>
+        <h4>Dapatkan Hasil Cinta Anda Sendiri Secara Instan*</h4>
+        <h4>(one calcucate only!)</h4>
+      </div>
 
-    <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Kiel</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
-                    </li>
-                </ul>
-
-                <ul class="navbar-nav ml-lg-auto">
-                    <div class="ml-lg-4">
-                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                        <i class="color-mode-icon"></i>
-                        Color mode
-                      </div>
-                    </div>
-                </ul>
-            </div>
+      <div class="maincontent">
+        <div>
+          <!-- Your name Inputfield -->
+          <label for="yourname">*Your Name</label><br />
+          <input
+            type="text"
+            id="yourname"
+            placeholder="Enter Your Name"
+            spellcheck="false"
+            maxlength="30"
+            required
+          />
         </div>
-    </nav>
-
-    <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                    <div class="about-text">
-                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
-                        <h1 class="animated animated-text">
-                            <span class="mr-2">Hey folks, I'm</span>
-                                <div class="animated-info">
-                                    <span class="animated-item">Yeheskiel K</span>
-                                    <span class="animated-item">FrontEnd</span>
-                                    <span class="animated-item">Student</span>
-                                </div>
-                        </h1>
-
-                        <p>"LIFE IS WHAT WE MAKE IT. SO DO GOOD, CREATE BEAUTIFUL MEMORIES, AND DO THINGS THAT GIVE MEANING TO YOUR LIFE."</p>
-                        
-                        <div class="custom-btn-group mt-4">
-                          <a href="https://yeheskielkendek.my.canva.site" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Introduction My Web</a>
-                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Work With Me</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-12 col-12">
-                    <div class="about-image svg">
-                        <img src="images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="project py-5" id="project">
-        <div class="container">
-                
-                <div class="row">
-                  <div class="col-lg-11 text-center mx-auto col-12">
-
-                      <div class="col-lg-8 mx-auto">
-                        <h2>My Creation (better coming soon&#x1F643;)</h2>
-                      </div>
-
-                      <div class="owl-carousel owl-theme">
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image02.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image03.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image04.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-                      </div>
-
-                  </div>
-                </div>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-12">
-                  <h2 class="mb-4">Experiences</h2>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2022</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>Frontend Web Developer (still learning)</h3>
-                                <p>Saya memulai belajar membuat web ketika saya masih kelas 3 SMA, ketika itu saya memulai untuk mempelajari HTML, CSS, Bootstrap, dan sedikit belajar JavaScript.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2023</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>Student (Now)</h3>
-                                <p>Saat ini saya sedang berkuliah di Universitas Negeri Surabaya dengan mengambil jurusan Teknik Informatika.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span>2011</span>
-                             </div>
-                             <div class="timeline-info">
-                                  <h3><span>SD Negeri Inpres Malompo</span><small></small></h3>
-                                  <p>Saya memulai pendidikan sekolah dasar saya di SD Negeri Inpres Malompo.</p>
-                             </div>
-                        </div>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span>2017</span>
-                             </div>
-                             <div class="timeline-info">
-                                  <h3><span>SMP Negeri 5 Nabire</span><small></small></h3>
-                                  <p>Saya memulai pendidikan sekolah menengah pertama saya di SMP Negeri 5 Nabire.</p>
-                             </div>
-                        </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2020</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>SMA YPPK Adhi Luhur</span><small>IPA</small></h3>
-                                <p>Saya memulai pendidikan sekolah menengah atas saya di SMA YYPK Adhi Luhur.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2023</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>Universitas Negeri Surabaya</span><small>TI</small></h3>
-                                <p>Sekarang, saya melanjutkan studi saya di Universitas Negeri Surabaya.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact py-5" id="contact">
-      <div class="container">
-        <div class="row">
-          
-            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-                <div class="contact-info-item">
-                  <h3 class="mb-3 text-white">Say hello</h3>
-                  <p class="footer-text mb-0">Phone: +62 813-4480-3107</p>
-                  <p><a href="https://www.google.co.id/maps/place/Yayasan+Kaki+Dian+Emas+-+Beasiswa+FLATS/@-7.3136308,112.7224503,18z/data=!4m6!3m5!1s0x2dd7fbdfdc918773:0xfd095a4bd4b107ee!8m2!3d-7.3136124!4d112.7231576!16s%2Fg%2F11qh7fdjzm?entry=ttu">Address: Jl. Ketintang Madya No.66, Ketintang, Surabaya (tap)</a></p>
-                  <p>Email: yeheskiel130905@gmail.com</p>
-                  <p><a href="https://www.instagram.com/yeheskiel_kendek">Instagram: yeheskiel_kendek (tap)</a></p>
-                </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12">
-            <div class="contact-form">
-              <h2 class="mb-4">Interested to work together? Let's talk</h2>
-
-              <form action="" method="get">
-                <div class="row">
-                  <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
-                  </div>
-
-                  <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
-                  </div>
-
-                  <div class="ml-lg-auto col-lg-5 col-12">
-                    <input type="submit" class="form-control submit-btn" value="Send Button">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
+        <div>
+          <!-- His/Her name Inputfield -->
+          <label for="theirname">*His/Her Name</label><br />
+          <input
+            type="text"
+            id="theirname"
+            placeholder="Enter His/Her Name"
+            spellcheck="false"
+            maxlength="30"
+            required
+          />
         </div>
       </div>
-    </section>
+      <button type="submit">❤ CALCULATE ❤</button>
 
-    <!-- FOOTER -->
-     <footer class="footer py-5">
-          <div class="container">
-               <div class="row">
+      <div class="result">
+        <h2>Result</h2>
+        <div class="divider"></div>
+        <p id="yourlovescoreis"></p>
+        <h1 id="score"></h1>
+        <p id="loveinfo"></p>
+        <p
+          id="reload"
+          style="
+            cursor: pointer;
+            display: none;
+            margin-top: 30px;
+            font-weight: 700;
+          "
+          onClick="window.location.reload();"
+        >
+          ↺ Re Calculate
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <p style="color: #000">
+        Made With <span style="color: #ff4136; font-size: 25px">❤</span> By
+        <a
+          style="text-decoration: none; font-weight: bold; color: #ff4136"
+          target="_blank"
+          href="https://alnahian2003.github.io"
+          >Yeheskiel Kendek</a
+        >
+        <br />
+        <small>*Fun Purpose Only🙃</small> <br>
+        <small>My IG: <a href="https://www.instagram.com/yeheskiel_kendek">yeheskiel_kendek (tap)</a></small>
+      </p>
+    </div>
 
-                    <div class="col-lg-12 col-12">                                
-                        <p class="copyright-text text-center">Copyright &copy; 2023 University of Surabaya . All rights reserved</p>
-                        <p class="copyright-text text-center">Designed by Yeheskiel Kendek</a></p>
-                    </div>
-                    
-               </div>
-          </div>
-     </footer>
+    <script type="text/javascript">
+    </script>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
+    <script>
+      /*=============================
+    Made With ♥ By Yeheskiel Kendek
+  ============================*/
+// Start Code
 
+// global variables
+var yourName = document.getElementById("yourname"),
+  theirName = document.getElementById("theirname"),
+  calcBtn = document.querySelector("button"),
+  yourlovescoreis = document.getElementById("yourlovescoreis"),
+  loveScore = Math.random() * 100,
+  loveInfo = document.getElementById("loveinfo"),
+  reloadBtn = document.getElementById("reload");
+loveScore = Math.floor(loveScore) + 1;
+
+//capitalize input values
+function capitalize_Words(str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
+// Love Score Counter
+function love() {
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+  (async function () {
+    var i = 0;
+    while (i < loveScore) {
+      document.getElementById("score").innerHTML = i + "%";
+      await sleep(20);
+      i++;
+    }
+  })();
+}
+
+// Add eventlistener to button
+calcBtn.addEventListener("click", function (e) {
+  loveScore = Math.random() * 100; //delete this line if you want to keep the same value in the same session.
+  e.preventDefault();
+  if (yourName.value == "" && theirName.value == "") {
+    alert("You can't leave fields empty");
+  }
+  if (yourName.value == "") {
+    alert("Please Enter Your Name");
+  }
+  if (theirName.value == "") {
+    alert("Please Enter His/Her Name");
+  }
+
+  //lovescore conditions
+  else if (loveScore <= 10) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " mencintai satu sama lain seperti Minyak & Air. Maaf, tapi ini tidak cukup untuk hubungan yang sempurna.";
+  } else if (loveScore <= 20) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " mencintai satu sama lain seperti Bird & Sky. Tetapi perlu sedikit konsentrasi pada cinta Anda.";
+  } else if (loveScore <= 30) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " saling mencintai satu sama lain seperti Tanah & Benih. Anda harus lebih menjaga cinta Anda! ";
+  } else if (loveScore <= 40) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " saling mencintai satu sama lain seperti Romeo & Juliet. Tidak ada yang palsu dalam cinta Anda. Go Ahead!";
+  } else if (loveScore <= 50) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " saling mencintai seperti Marie & Pierre Curie. Itu adalah kombinasi yang bagus. Anda adalah contoh yang baik dari cinta sejati.";
+  } else if (loveScore <= 60) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " saling mencintai satu sama lain seperti Bumi dan Bulan. Anda tidak dapat hidup tanpa satu sama lain.";
+  } else if (loveScore <= 70) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " Saling mencintai satu sama lain seperti Sungai & Laut. Sebarkan Cinta, bukan Kebencian.";
+  } else if (loveScore <= 80) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " mencintai satu sama lain seperti lem. Tidak ada yang dapat memisahkan Anda satu sama lain. Cinta adalah Selamanya.";
+  } else if (loveScore <= 90) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " saling mencintai satu sama lain lebih dari apa pun di dunia ini! Kalian adalah contoh terbaik dari cinta sejati.";
+  } else if (loveScore <= 100) {
+    yourlovescoreis.innerHTML = "Your Love Score is";
+    love();
+    reloadBtn.style.display = "block";
+    loveInfo.innerHTML =
+      "<b>You</b> and " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " love each other like Ertuğrul Gazi & Halime Sultan. You should get married with " +
+      "<b>" +
+      capitalize_Words(theirName.value) +
+      "</b>" +
+      " very soon. Best of Luck!";
+  }
+});
+
+    </script>
   </body>
 </html>
